@@ -12,7 +12,6 @@ if (!$productId) {
     exit;
 }
 
-// initialize cart
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }

@@ -8,7 +8,7 @@ class Planta {
     private $valor;
     private $estoque;
 
-    // Now categorias is a single string (categoria) stored directly on produtos.categoria
+    
     public static function cadastrarPlanta($nome, $categoria, $descricao, $valor, $estoque, $imagemCaminho = null) {
         $pdo = Database::connect();
 

@@ -91,7 +91,7 @@ $postTarget = '../controllers/cart_db.php';
       </table>
 
       <p style="font-weight:600">Total: R$ <?= number_format($total,2,',','.') ?></p>
-      <p><a href="index.php">Continuar comprando</a> | <a href="#">Finalizar compra</a></p>
+      <p><a href="index.php">Continuar comprando</a> | <a href="comprar.php">Finalizar compra</a></p>
 
     <?php endif; ?>
 
