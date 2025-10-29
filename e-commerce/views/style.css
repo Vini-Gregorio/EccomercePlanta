@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#main-header {
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background-color: #225634; 
+    color: white;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out; 
+    overflow: hidden; 
+}
+
+.large-header {
+    height: 600px; 
+    padding-bottom: 20px;
+    border-bottom: 50px solid #12321d; 
+}
+
+.small-header {
+    height: 80px; 
+    border-bottom: none; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    height: 50px;
+}
+
+.logo img {
+    height: 40px; 
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 50px;
+}
+.search-container input {
+    width: 100%;
+    padding: 7px 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    border-radius: 20px;
+}
+
+.search-container .search-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    margin-left: -35px; 
+    cursor: pointer;
+    background-image: url('imgs/pesquisa.png'); 
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.header-nav .cart-icon {
+    font-size: 24px;
+}
+
+.header-content-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    height: calc(100% - 65px); 
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.small-header .header-content-main {
+    opacity: 0;
+    pointer-events: none; 
+}
+
+.main-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.main-text h1 {
+    font-size: 3.5em;
+    line-height: 1.1;
+    margin: 0;
+}
+
+
+.main-image {
+    width: 450px; 
+    height: 450px;
+    background-color: white; 
+    border-radius: 50% 50% 0 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+main {
+    padding-top: 600px;
+}
+
+.small-header + main {
+    padding-top: 80px; 
+}
