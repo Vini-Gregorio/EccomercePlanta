@@ -14,6 +14,14 @@ class ProdutoController {
             $valor = $_POST['value'] ?? 0;
             $estoque = $_POST['stock'] ?? 0;
             $categorias = isset($_POST['categoria']) ? $_POST['categoria'] : [];
+            $categoria = '';
+            if (!empty($categorias)) {
+                if (is_array($categorias)) {
+                    $categoria = $categorias[0];
+                } else {
+                    $categoria = $categorias;
+                }
+            }
             $imagemCaminho = null;
             if (isset($_FILES['product-image']) && $_FILES['product-image']['error'] === UPLOAD_ERR_OK) {
                 $tmp = $_FILES['product-image']['tmp_name'];
@@ -23,11 +31,12 @@ class ProdutoController {
                     $imagemCaminho = 'imgs/' . $nomeArquivo;
                 }
             }
-            Planta::cadastrarPlanta($nome, $categorias, $descricao, $valor, $estoque, $imagemCaminho);
-            header('Location: ../views/sucesso.html');
+            Planta::cadastrarPlanta($nome, $categoria, $descricao, $valor, $estoque, $imagemCaminho);
+            
+            header('Location: ../views/estoque.php');
             exit;
         } else {
-            include __DIR__ . '/../views/cadastroproduto.html';
+            include __DIR__ . '/../views/cadastroproduto.php';
         }
     }
 }

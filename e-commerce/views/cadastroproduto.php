@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../config/require_login.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -22,14 +23,14 @@
       <fieldset>
         <legend>Categoria</legend>
         <div class="checkbox-group">
-          <label><input type="checkbox" name="categoria[]" value="Árvores"> Árvores</label>
-          <label><input type="checkbox" name="categoria[]" value="Sementes"> Sementes</label>
-          <label><input type="checkbox" name="categoria[]" value="Folhas"> Folhas</label>
-          <label><input type="checkbox" name="categoria[]" value="Arbustos"> Arbustos</label>
-          <label><input type="checkbox" name="categoria[]" value="Para chá"> Para chá</label>
-          <label><input type="checkbox" name="categoria[]" value="Temperos"> Temperos</label>
-          <label><input type="checkbox" name="categoria[]" value="Flores"> Flores</label>
-          <label><input type="checkbox" name="categoria[]" value="Carnívoras"> Carnívoras</label>
+          <label><input type="radio" name="categoria[]" value="Árvores"> Árvores</label>
+          <label><input type="radio" name="categoria[]" value="Sementes"> Sementes</label>
+          <label><input type="radio" name="categoria[]" value="Folhas"> Folhas</label>
+          <label><input type="radio" name="categoria[]" value="Arbustos"> Arbustos</label>
+          <label><input type="radio" name="categoria[]" value="Para chá"> Para chá</label>
+          <label><input type="radio" name="categoria[]" value="Temperos"> Temperos</label>
+          <label><input type="radio" name="categoria[]" value="Flores"> Flores</label>
+          <label><input type="radio" name="categoria[]" value="Carnívoras"> Carnívoras</label>
         </div>
       </fieldset>
 

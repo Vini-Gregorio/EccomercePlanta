@@ -65,7 +65,7 @@ body {
     font-size: 18px;
     margin-left: -35px; 
     cursor: pointer;
-    background-image: url('imgs/pesquisa.png'); 
+    background-image: url('/imgs/pesquisa.png'); 
     width: 20px;
     height: 20px;
     background-size: cover;
@@ -132,9 +132,5 @@ body {
 }
 
 main {
-    padding-top: 600px;
-}
-
-.small-header + main {
-    padding-top: 80px; 
+    padding-top: 0; /* dynamically set by script to match header height */
 }
